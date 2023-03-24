@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài 2</title>
+</head>
+<body>
+    <script>
+        function mayTinh() {
+  let phepToan = prompt("Nhập phép tính (+, -, *, /):");
+  let soThuNhat = parseFloat(prompt("Nhập số thứ nhất:"));
+  let soThuHai = parseFloat(prompt("Nhập số thứ hai:"));
+
+  if (isNaN(soThuNhat) || isNaN(soThuHai)) {
+    console.log("Hai giá trị nhập vào phải là số!");
+    return;
+  }
+
+  switch (phepToan) {
+    case "+":
+      console.log(soThuNhat + " + " + soThuHai + " = " + (soThuNhat + soThuHai));
+      break;
+    case "-":
+      console.log(soThuNhat + " - " + soThuHai + " = " + (soThuNhat - soThuHai));
+      break;
+    case "*":
+      console.log(soThuNhat + " * " + soThuHai + " = " + (soThuNhat * soThuHai));
+      break;
+    case "/":
+      if (soThuHai === 0) {
+        console.log("Không thể chia cho số 0!");
+        return;
+      }
+      console.log(soThuNhat + " / " + soThuHai + " = " + (soThuNhat / soThuHai));
+      break;
+    default:
+      console.log("Phép tính không hợp lệ!");
+      break;
+  }
+}
+
+// Chạy chương trình
+mayTinh();
+    </script>
+</body>
+</html>
